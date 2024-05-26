@@ -1,12 +1,12 @@
+import { getSortedPostsData } from '../../lib/posts';
 import Link from 'next/link';
-import { getSortedPostsData } from '../lib/posts';
 
-export default async function Home() {
+export default function Blog() {
   const allPostsData = getSortedPostsData();
 
   return (
     <div>
-      <h1>Статьи</h1>
+      <h1>Блог</h1>
       <ul>
         {allPostsData.map(({ id, date, title }) => (
           <li key={id}>
