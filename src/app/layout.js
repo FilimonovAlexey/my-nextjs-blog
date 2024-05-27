@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import './globals.css';
 
 export const metadata = {
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <header>
-          <img src="/icon.svg" alt="Logo" style={{ width: '40px', marginRight: '10px' }} />
+          <Image src="/icon.svg" alt="Logo" width={40} height={40} style={{ marginRight: '10px' }} />
           <h1>Filimonov.dev</h1>
           <nav>
             <ul>
@@ -28,6 +29,10 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main>{children}</main>
+        <footer>
+          <p>Copyright © 2024 Filimonov.dev</p>
+          <p><Link href="/">Главная</Link> | <Link href="/about">Обо мне</Link> | <Link href="/blog">Блог</Link></p>
+        </footer>
       </body>
     </html>
   );
