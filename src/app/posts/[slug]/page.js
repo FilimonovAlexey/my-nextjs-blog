@@ -1,5 +1,6 @@
 import { getAllPostIds, getPostData } from '../../../lib/posts';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default async function Post({ params }) {
   const postData = await getPostData(params.slug);
@@ -8,9 +9,19 @@ export default async function Post({ params }) {
     <>
       <Head>
         <title>{postData.title}</title>
+        <meta name="description" content={postData.description} />
       </Head>
       <article>
         <h1>{postData.title}</h1>
+        <p>Опубликовано: {postData.publishDate}</p>
+        <p>Обновлено: {postData.updatedDate}</p>
+        <div>
+          {postData.tags && postData.tags.map(tag => (
+            <Link key={tag} href={`/tags/${tag}`}>
+              <span style={{ marginRight: '10px', cursor: 'pointer' }}>#{tag}</span>
+            </Link>
+          ))}
+        </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </>
