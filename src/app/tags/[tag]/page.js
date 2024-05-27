@@ -9,13 +9,14 @@ export default function Tag({ params }) {
     <div>
       <h1>Статьи с тегом: {params.tag}</h1>
       <ul>
-        {filteredPosts.map(({ id, date, title }) => (
+        {filteredPosts.map(({ id, date, title, description }) => (
           <li key={id}>
             <Link href={`/posts/${id}`}>
               {title}
             </Link>
             <br />
             <small>{date}</small>
+            <p>{description}</p>
           </li>
         ))}
       </ul>
