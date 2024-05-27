@@ -21,6 +21,10 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main>{children}</main>
+        <footer>
+          <p>Copyright © 2024 Filimonov.dev</p>
+          <p><Link href="/">Главная</Link> | <Link href="/about">Обо мне</Link> | <Link href="/blog">Блог</Link></p>
+        </footer>
       </body>
     </html>
   );

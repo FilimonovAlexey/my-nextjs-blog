@@ -1,22 +1,22 @@
 body {
-  font-family: 'Inter', sans-serif; /* Использование современного шрифта */
-  line-height: 1.6; /* Улучшение читаемости */
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7; /* Светлый фон */
-  color: #333; /* Темный текст */
+  background-color: #f7f7f7;
+  color: #333;
 }
 
 header {
-  background-color: #fff; /* Белый фон для заголовка */
+  background-color: #fff;
   padding: 20px;
   text-align: center;
-  border-bottom: 1px solid #eaeaea; /* Небольшая тень */
+  border-bottom: 1px solid #eaeaea;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem; /* Увеличенный размер шрифта для заголовка */
+  font-size: 2rem;
 }
 
 nav ul {
@@ -24,7 +24,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px; /* Расстояние между элементами меню */
+  gap: 20px;
 }
 
 nav li {
@@ -33,8 +33,8 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #0070f3; /* Синий цвет ссылок */
-  font-weight: 500; /* Полужирный текст */
+  color: #0070f3;
+  font-weight: 500;
 }
 
 nav a:hover {
@@ -42,23 +42,23 @@ nav a:hover {
 }
 
 main {
-  padding: 40px 20px; /* Отступы для основного контента */
+  padding: 40px 20px;
   max-width: 800px;
   margin: 0 auto;
-  background-color: #fff; /* Белый фон для основного контента */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 section {
-  margin-bottom: 40px; /* Отступы между секциями */
+  margin-bottom: 40px;
 }
 
 h1, h2 {
-  font-weight: 700; /* Жирный текст для заголовков */
+  font-weight: 700;
 }
 
 ul {
-  padding-left: 20px; /* Отступы для списков */
+  padding-left: 20px;
 }
 
 li {
@@ -66,5 +66,13 @@ li {
 }
 
 small {
-  color: #666; /* Светло-серый текст для метаданных */
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #eaeaea;
+  margin-top: 40px;
 }

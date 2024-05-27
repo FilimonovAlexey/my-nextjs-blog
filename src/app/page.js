@@ -8,11 +8,15 @@ export default async function Home() {
   return (
     <div>
       <section>
-        <p>
-          Алексей. Занимаюсь frontend-разработкой и пишу SQL скрипты в одной IT компании, веду канал на YouTube. На развитие канала автору!
-        </p>
+        <p>Алексей. Занимаюсь frontend-разработкой и пишу SQL скрипты в одной IT компании, веду канал на YouTube. На развитие канала автору!</p>
+        <p>Я в социальных сетях:</p>
+        <ul>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
       </section>
-      <h1>Мои статьи</h1>
+      <h1>Статьи</h1>
       <ul>
         {allPostsData.map(({ id, date, title }) => (
           <li key={id}>
