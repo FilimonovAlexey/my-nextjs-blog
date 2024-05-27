@@ -1,22 +1,42 @@
+@font-face {
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  src: url('../assets/roboto-mono-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-weight: 700;
+  src: url('../assets/roboto-mono-700.ttf') format('truetype');
+}
+
 body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
-  color: #333;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0 auto;
+  display: flex;
+  min-height: 100vh;
+  max-width: 768px;
+  flex-direction: column;
+  background-color: var(--theme-bg);
+  padding: 16px 32px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: var(--theme-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
-  background-color: #fff;
+  background-color: var(--theme-bg);
   padding: 20px;
   text-align: center;
-  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: var(--theme-text);
 }
 
 nav ul {
@@ -24,16 +44,16 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  margin: 10px 0 0;
 }
 
 nav li {
-  margin: 0;
+  margin: 0 15px;
 }
 
 nav a {
   text-decoration: none;
-  color: #0070f3;
+  color: var(--theme-link);
   font-weight: 500;
 }
 
@@ -43,10 +63,9 @@ nav a:hover {
 
 main {
   padding: 40px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--theme-bg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 section {
@@ -66,13 +85,32 @@ li {
 }
 
 small {
-  color: #666;
+  color: var(--theme-accent-2);
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #fff;
-  border-top: 1px solid #eaeaea;
-  margin-top: 40px;
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+form input {
+  padding: 5px;
+  width: 200px;
+  margin-right: 10px;
+  border: 1px solid var(--theme-accent-2);
+  border-radius: 4px;
+}
+
+form button {
+  padding: 5px 10px;
+  background-color: var(--theme-accent);
+  border: none;
+  color: var(--theme-bg);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--theme-accent-2);
 }
