@@ -1,125 +1,22 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
-body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif; /* Использование современного шрифта */
+  line-height: 1.6; /* Улучшение читаемости */
   margin: 0;
   padding: 0;
+  background-color: #f7f7f7; /* Светлый фон */
+  color: #333; /* Темный текст */
 }
 
 header {
-  background: #f8f8f8;
+  background-color: #fff; /* Белый фон для заголовка */
   padding: 20px;
   text-align: center;
+  border-bottom: 1px solid #eaeaea; /* Небольшая тень */
 }
 
 header h1 {
   margin: 0;
+  font-size: 2rem; /* Увеличенный размер шрифта для заголовка */
 }
 
 nav ul {
@@ -127,17 +24,47 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
+  gap: 20px; /* Расстояние между элементами меню */
 }
 
 nav li {
-  margin: 0 15px;
+  margin: 0;
 }
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #0070f3; /* Синий цвет ссылок */
+  font-weight: 500; /* Полужирный текст */
 }
 
 nav a:hover {
   text-decoration: underline;
+}
+
+main {
+  padding: 40px 20px; /* Отступы для основного контента */
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff; /* Белый фон для основного контента */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+section {
+  margin-bottom: 40px; /* Отступы между секциями */
+}
+
+h1, h2 {
+  font-weight: 700; /* Жирный текст для заголовков */
+}
+
+ul {
+  padding-left: 20px; /* Отступы для списков */
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+small {
+  color: #666; /* Светло-серый текст для метаданных */
 }
