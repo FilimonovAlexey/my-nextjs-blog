@@ -1,6 +1,5 @@
 import { getSortedPostsData } from '../../lib/posts';
 import Link from 'next/link';
-import Projects from '../../components/Projects';
 
 export default function Blog() {
   const allPostsData = getSortedPostsData();
@@ -19,7 +18,6 @@ export default function Blog() {
           </li>
         ))}
       </ul>
-      <Projects />
     </div>
   );
 }
