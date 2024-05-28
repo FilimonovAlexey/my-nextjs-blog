@@ -66,6 +66,7 @@ main {
   background-color: var(--theme-bg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  flex: 1;
 }
 
 section {
@@ -113,4 +114,49 @@ form button {
 
 form button:hover {
   background-color: var(--theme-accent-2);
+}
+
+/* Styles for the blog page layout */
+.blog-container {
+  display: flex;
+  gap: 20px;
+}
+
+.posts-container {
+  flex: 3;
+}
+
+.tags-container {
+  flex: 1;
+}
+
+.post-item {
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: var(--theme-accent);
+  color: var(--theme-bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.tag-item {
+  margin-bottom: 10px;
+}
+
+.tag-item a {
+  background-color: var(--theme-accent);
+  color: var(--theme-bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-decoration: none;
 }
