@@ -3,7 +3,7 @@ import { getSortedPostsData } from '../lib/posts';
 import Projects from '../components/Projects';
 
 export default async function Home() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData().filter(post => post.title && post.date);
 
   return (
     <div>
@@ -24,7 +24,11 @@ export default async function Home() {
               {title}
             </Link>
             <br />
-            <small>{date}</small>
+            <small>{date ? new Date(date).toLocaleDateString('ru-RU', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            }) : 'Дата не указана'}</small>
           </li>
         ))}
       </ul>

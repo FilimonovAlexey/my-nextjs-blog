@@ -19,10 +19,11 @@ export function getSortedPostsData() {
     return {
       id,
       ...matterResult.data,
+      date: matterResult.data.date ? new Date(matterResult.data.date).toISOString() : null,
     };
   });
 
-  return allPostsData.sort((a, b) => (a.publishDate < b.publishDate ? 1 : -1));
+  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export async function getPostData(id) {
@@ -40,6 +41,7 @@ export async function getPostData(id) {
     id,
     contentHtml,
     ...matterResult.data,
+    date: matterResult.data.date ? new Date(matterResult.data.date).toISOString() : null,
   };
 }
 

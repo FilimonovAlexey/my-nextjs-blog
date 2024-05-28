@@ -13,8 +13,7 @@ export default async function Post({ params }) {
       </Head>
       <article>
         <h1>{postData.title}</h1>
-        <p>Опубликовано: {postData.publishDate}</p>
-        <p>Обновлено: {postData.updatedDate}</p>
+        <p>Опубликовано: {postData.date}</p>
         <div>
           {postData.tags && postData.tags.map(tag => (
             <Link key={tag} href={`/tags/${tag}`}>

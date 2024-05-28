@@ -2,7 +2,7 @@ import { getSortedPostsData } from '../../lib/posts';
 import Link from 'next/link';
 
 export default function Blog() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData().filter(post => post.title && post.date); // фильтруем только статьи с заголовком и датой
 
   // Собираем все уникальные теги
   const tags = Array.from(new Set(allPostsData.flatMap(post => post.tags || [])));
@@ -18,11 +18,11 @@ export default function Blog() {
                 {title}
               </Link>
               <br />
-              <small>{new Date(date).toLocaleDateString('ru-RU', {
+              <small>{date ? new Date(date).toLocaleDateString('ru-RU', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
-              })}</small>
+              }) : 'Дата не указана'}</small>
               <p>{description}</p>
               <div className="tags">
                 {tags && tags.map(tag => (
