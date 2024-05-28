@@ -1,8 +1,7 @@
 ---
 title: "Деплой Telegram бота на сервер"
 description: "Этот пост о том как выполнить деплой Telegram бота на свой сервер"
-publishDate: "05 March 2024"
-updatedDate: 05 March 2024
+date: "2024-05-29"
 tags: ["telegram", "guide"]
 ---
 

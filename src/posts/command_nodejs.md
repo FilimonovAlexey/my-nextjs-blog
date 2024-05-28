@@ -1,8 +1,7 @@
 ---
 title: "Полезные команды для работы с Node JS"
 description: "Этот пост содержит перечень команд в терминале для работы с Node JS"
-publishDate: "02 March 2024"
-updatedDate: 02 March 2024
+date: "2024-05-29"
 tags: ["nodejs", "guide"]
 ---
 
