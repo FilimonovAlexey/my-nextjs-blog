@@ -15,7 +15,15 @@ export default function Tag({ params }) {
               {title}
             </Link>
             <br />
-            <small>{date}</small>
+            <div>
+            <small>
+              Опубликовано: {date ? new Date(date).toLocaleDateString('ru-RU', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              }) : 'Дата не указана'}
+            </small>
+          </div>
             <p>{description}</p>
           </li>
         ))}

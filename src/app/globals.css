@@ -1,3 +1,4 @@
+/* Существующие стили */
 @font-face {
   font-family: 'Roboto Mono';
   font-weight: 400;
@@ -146,6 +147,7 @@ form button:hover {
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 0.75rem;
+  text-decoration: none;
 }
 
 .tag-item {

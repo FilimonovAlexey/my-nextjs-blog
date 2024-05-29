@@ -13,7 +13,15 @@ export default async function Post({ params }) {
       </Head>
       <article>
         <h1>{postData.title}</h1>
-        <p>Опубликовано: {postData.date}</p>
+        <div>
+          <small>
+            Опубликовано: {postData.date ? new Date(postData.date).toLocaleDateString('ru-RU', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            }) : 'Дата не указана'}
+          </small>
+        </div>
         <div>
           {postData.tags && postData.tags.map(tag => (
             <Link key={tag} href={`/tags/${tag}`}>

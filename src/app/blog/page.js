@@ -26,7 +26,9 @@ export default function Blog() {
               <p>{description}</p>
               <div className="tags">
                 {tags && tags.map(tag => (
-                  <span key={tag} className="tag">#{tag}</span>
+                  <Link key={tag} href={`/tags/${tag}`}>
+                    <span className="tag">#{tag}</span>
+                  </Link>
                 ))}
               </div>
             </li>
