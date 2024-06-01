@@ -114,7 +114,7 @@ form button {
 }
 
 form button:hover {
-  background-color: var (--theme-accent-2);
+  background-color: var(--theme-accent-2);
 }
 
 /* Styles for the blog page layout */
@@ -194,4 +194,29 @@ pre {
 
 .expressive-code__copy-button:hover {
   background: #444444;
+}
+
+/* Styles for footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--theme-bg);
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--theme-link);
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
