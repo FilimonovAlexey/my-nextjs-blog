@@ -18,8 +18,10 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <header>
-          <Image src="/icon.svg" alt="Logo" width={40} height={40} style={{ marginRight: '10px' }} />
-          <h1>Filimonov.dev</h1>
+          <h1>
+            <Image src="/icon.svg" alt="Logo" width={40} height={40} />
+            Filimonov.dev
+          </h1>
           <nav>
             <ul>
               <li><Link href="/">Главная</Link></li>
@@ -31,7 +33,13 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <footer>
           <p>Copyright © 2024 Filimonov.dev</p>
-          <p><Link href="/">Главная</Link> | <Link href="/about">Обо мне</Link> | <Link href="/blog">Блог</Link></p>
+          <div>
+            <Link href="/">Главная</Link>
+            <span>|</span>
+            <Link href="/about">Обо мне</Link>
+            <span>|</span>
+            <Link href="/blog">Блог</Link>
+          </div>
         </footer>
       </body>
     </html>
