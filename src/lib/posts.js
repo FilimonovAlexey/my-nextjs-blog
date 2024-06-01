@@ -3,6 +3,11 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import { unified } from 'unified';
+import rehypeParse from 'rehype-parse';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
+import rehypeExpressiveCode from 'rehype-expressive-code';
 
 const postsDirectory = path.join(process.cwd(), 'src/posts');
 
@@ -35,7 +40,20 @@ export async function getPostData(id) {
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+
+  const processedHtml = await unified()
+    .use(rehypeParse, { fragment: true })
+    .use(rehypeRaw)
+    .use(rehypeExpressiveCode, {
+      copyButton: {
+        text: "Скопировать",
+        successText: "Скопировано"
+      }
+    })
+    .use(rehypeStringify)
+    .process(processedContent.toString());
+
+  const contentHtml = processedHtml.toString();
 
   return {
     id,

@@ -1,16 +1,11 @@
-import { getAllPostIds, getPostData } from '../../../lib/posts';
-import Head from 'next/head';
+import { getPostData, getAllPostIds } from '../../../lib/posts';
 import Link from 'next/link';
 
 export default async function Post({ params }) {
   const postData = await getPostData(params.slug);
 
   return (
-    <>
-      <Head>
-        <title>{postData.title}</title>
-        <meta name="description" content={postData.description} />
-      </Head>
+    <div>
       <article>
         <h1>{postData.title}</h1>
         <div>
@@ -22,16 +17,17 @@ export default async function Post({ params }) {
             }) : 'Дата не указана'}
           </small>
         </div>
-        <div>
+        <div className="tags">
           {postData.tags && postData.tags.map(tag => (
             <Link key={tag} href={`/tags/${tag}`}>
-              <span style={{ marginRight: '10px', cursor: 'pointer' }}>#{tag}</span>
+              <span className="tag">#{tag}</span>
             </Link>
           ))}
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className="content" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-    </>
+      <Link href="/blog">← Назад к блогу</Link>
+    </div>
   );
 }
 

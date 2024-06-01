@@ -114,7 +114,7 @@ form button {
 }
 
 form button:hover {
-  background-color: var(--theme-accent-2);
+  background-color: var (--theme-accent-2);
 }
 
 /* Styles for the blog page layout */
@@ -148,6 +148,7 @@ form button:hover {
   border-radius: 4px;
   font-size: 0.75rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .tag-item {
@@ -161,4 +162,36 @@ form button:hover {
   border-radius: 4px;
   font-size: 0.75rem;
   text-decoration: none;
+}
+
+/* Styles for code highlighting */
+pre, code {
+  font-family: 'Roboto Mono', monospace;
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 0.5em;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+pre {
+  padding: 1em;
+  margin: 1em 0;
+}
+
+/* Styles for copy button */
+.expressive-code__copy-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: #2d2d2d;
+  color: #f8f8f2;
+  border: none;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.expressive-code__copy-button:hover {
+  background: #444444;
 }
