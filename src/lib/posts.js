@@ -44,12 +44,7 @@ export async function getPostData(id) {
   const processedHtml = await unified()
     .use(rehypeParse, { fragment: true })
     .use(rehypeRaw)
-    .use(rehypeExpressiveCode, {
-      copyButton: {
-        text: "Скопировать",
-        successText: "Скопировано"
-      }
-    })
+    .use(rehypeExpressiveCode)
     .use(rehypeStringify)
     .process(processedContent.toString());
 
