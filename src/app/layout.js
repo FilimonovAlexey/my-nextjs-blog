@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body>
         <header>
           <h1>
-            <Image src="/icon.svg" alt="Logo" width={40} height={40} />
+            <Image src="/icon.svg" alt="Logo" width={50} height={50} />
             Filimonov.dev
           </h1>
           <nav>
