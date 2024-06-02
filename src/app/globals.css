@@ -186,7 +186,7 @@ form button:hover {
 
 .tag-item a {
   background-color: var(--theme-accent);
-  color: var(--theme-bg);
+  color: var (--theme-bg);
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 0.75rem;
@@ -265,4 +265,60 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Styles for displaying articles on the home page */
+.home-posts-list {
+  list-style: none;
+  padding-left: 0; /* Убираем отступ слева */
+  margin-bottom: 20px;
+}
+
+.home-post-item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.home-post-date {
+  margin-right: 10px;
+  color: var(--theme-accent-2);
+}
+
+.home-post-title {
+  color: var(--theme-text);
+}
+
+.home-post-title:hover {
+  text-decoration: none;
+}
+
+.projects-section {
+  margin-top: 20px;
+}
+
+.projects-section h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.projects-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects-section li {
+  margin-bottom: 15px;
+}
+
+.projects-section a {
+  color: var(--theme-text);
+  text-decoration: underline;
+  border-bottom: 1px solid var(--theme-text);
+}
+
+.projects-section a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
 }

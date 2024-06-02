@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <section>
+    <section className="projects-section">
       <h2>Мои проекты</h2>
       <ul>
         <li>

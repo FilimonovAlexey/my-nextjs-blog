@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { getSortedPostsData } from '../lib/posts';
 import Projects from '../components/Projects';
 
-
 export default async function Home() {
   const allPostsData = getSortedPostsData().filter(post => post.title && post.date);
 
@@ -33,18 +32,17 @@ export default async function Home() {
         </div>
       </section>
       <h1>Статьи</h1>
-      <ul>
+      <ul className="home-posts-list">
         {allPostsData.map(({ id, date, title }) => (
-          <li key={id}>
-            <Link href={`/posts/${id}`}>
-              {title}
-            </Link>
-            <br />
-            <small>{date ? new Date(date).toLocaleDateString('ru-RU', {
+          <li key={id} className="home-post-item">
+            <small className="home-post-date">{date ? new Date(date).toLocaleDateString('ru-RU', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'
             }) : 'Дата не указана'}</small>
+            <Link href={`/posts/${id}`} className="home-post-title">
+              {title}
+            </Link>
           </li>
         ))}
       </ul>
