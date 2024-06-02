@@ -14,17 +14,17 @@ export default async function Home() {
           <p>Я в социальных сетях:</p>
           <ul className="social-icons">
             <li>
-              <Link href="https://www.youtube.com/" target="_blank">
+              <Link href="https://youtube.com/@tehno.maniak" target="_blank">
                 <Image src="/icons/youtube.svg" alt="YouTube" width={24} height={24} />
               </Link>
             </li>
             <li>
-              <Link href="https://telegram.org/" target="_blank">
+              <Link href="https://t.me/tehnomaniak07" target="_blank">
                 <Image src="/icons/telegram.svg" alt="Telegram" width={24} height={24} />
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/" target="_blank">
+              <Link href="https://github.com/FilimonovAlexey" target="_blank">
                 <Image src="/icons/github.svg" alt="GitHub" width={24} height={24} />
               </Link>
             </li>

@@ -4,9 +4,9 @@ export default function Projects() {
       <h2>Мои проекты</h2>
       <ul>
         <li>
-          <strong>Telegram бот Предложка</strong>: 
+          <strong>Telegram бот обратной связи</strong>: 
           <a href="https://github.com/FilimonovAlexey/YouTubeHelperTgBot" target="_blank" rel="noopener noreferrer">
-            Telegram бот Предложка.
+            Telegram бот.
           </a>
         </li>
         <li>
