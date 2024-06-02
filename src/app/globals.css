@@ -30,7 +30,6 @@ header {
   background-color: var(--theme-bg);
   padding: 20px;
   text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -86,7 +85,6 @@ nav a:hover {
 main {
   padding: 20px;
   background-color: var(--theme-bg);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   flex: 1;
 }
@@ -194,11 +192,12 @@ form button:hover {
   gap: 5px; /* Отступ между иконками */
   padding: 0;
   list-style: none;
-  margin-left: 10px;
+  margin: 0 0 0 10px;
 }
 
 .social-icons li {
   display: inline;
+  margin: 0;
 }
 
 .social-icons a {
