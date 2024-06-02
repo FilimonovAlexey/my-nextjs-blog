@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { getSortedPostsData } from '../lib/posts';
 import Projects from '../components/Projects';
+
 
 export default async function Home() {
   const allPostsData = getSortedPostsData().filter(post => post.title && post.date);
@@ -14,17 +16,17 @@ export default async function Home() {
           <ul className="social-icons">
             <li>
               <Link href="https://www.youtube.com/" target="_blank">
-                <img src="/icons/youtube.svg" alt="YouTube" />
+                <Image src="/icons/youtube.svg" alt="YouTube" width={24} height={24} />
               </Link>
             </li>
             <li>
               <Link href="https://telegram.org/" target="_blank">
-                <img src="/icons/telegram.svg" alt="Telegram" />
+                <Image src="/icons/telegram.svg" alt="Telegram" width={24} height={24} />
               </Link>
             </li>
             <li>
               <Link href="https://github.com/" target="_blank">
-                <img src="/icons/github.svg" alt="GitHub" />
+                <Image src="/icons/github.svg" alt="GitHub" width={24} height={24} />
               </Link>
             </li>
           </ul>
