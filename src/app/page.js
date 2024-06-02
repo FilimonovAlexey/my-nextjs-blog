@@ -31,7 +31,7 @@ export default async function Home() {
           </ul>
         </div>
       </section>
-      <h1>Статьи</h1>
+      <h2>Статьи</h2>
       <ul className="home-posts-list">
         {allPostsData.map(({ id, date, title }) => (
           <li key={id} className="home-post-item">
