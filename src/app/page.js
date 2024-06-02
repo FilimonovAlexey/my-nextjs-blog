@@ -9,9 +9,9 @@ export default async function Home() {
     <div>
       <section>
         <p>Алексей. Занимаюсь frontend-разработкой и пишу SQL скрипты в одной IT компании, веду канал на YouTube. На развитие канала автору!</p>
-        <p style={{ display: 'flex', alignItems: 'center' }}>
-          Я в социальных сетях:
-          <ul className="social-icons" style={{ marginLeft: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <p>Я в социальных сетях:</p>
+          <ul className="social-icons">
             <li>
               <Link href="https://www.youtube.com/" target="_blank">
                 <img src="/icons/youtube.svg" alt="YouTube" />
@@ -28,7 +28,7 @@ export default async function Home() {
               </Link>
             </li>
           </ul>
-        </p>
+        </div>
       </section>
       <h1>Статьи</h1>
       <ul>
