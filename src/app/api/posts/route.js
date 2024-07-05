@@ -59,14 +59,11 @@ export async function getPostData(id) {
   };
 }
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
-
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        slug: fileName.replace(/\.md$/, ''),
-      },
-    };
+export async function GET(request) {
+  const posts = getSortedPostsData();
+  return new Response(JSON.stringify(posts), {
+    headers: {
+      'Content-Type': 'application/json',
+    },
   });
 }

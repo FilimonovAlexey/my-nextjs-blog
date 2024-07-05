@@ -1,6 +1,7 @@
+import './globals.css';
+import Header from '../components/Header';
 import Link from 'next/link';
 import Image from 'next/image';
-import './globals.css';
 
 export const metadata = {
   title: 'Filimonov.dev',
@@ -17,19 +18,7 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/manifest.webmanifest" />
       </head>
       <body>
-        <header>
-          <h1>
-            <Image src="/icon.svg" alt="Logo" width={50} height={50} />
-            Filimonov.dev
-          </h1>
-          <nav>
-            <ul>
-              <li><Link href="/">Главная</Link></li>
-              <li><Link href="/about">Обо мне</Link></li>
-              <li><Link href="/blog">Блог</Link></li>
-            </ul>
-          </nav>
-        </header>
+        <Header />
         <main>{children}</main>
         <footer>
           <p>Copyright © 2024 Filimonov.dev</p>

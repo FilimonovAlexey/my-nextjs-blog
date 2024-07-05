@@ -323,3 +323,29 @@ footer a:hover {
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.search-form input {
+  padding: 5px;
+  border: 1px solid var(--theme-accent-2);
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.search-form button {
+  padding: 5px 10px;
+  background-color: var(--theme-accent);
+  border: none;
+  color: var(--theme-bg);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: var(--theme-accent-2);
+}
